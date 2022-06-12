@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use, unnecessary_new
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -36,23 +38,31 @@ class HomeScreen extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     alignment: Alignment.center,
-                    margin: const EdgeInsets.only(top: 90),
+                    margin: const EdgeInsets.only(bottom: 200),
                     child: ElevatedButton(
-                      child: const Text("Convenios"),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(170, 45),
+                        maximumSize: const Size(200, 50),
+                      ),
+                      child: const Text("CONVENIOS"),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const FourthScreen()),
+                              builder: (context) => const SecondScreen()),
                         );
                       },
                     ),
                   ),
                   Container(
                     alignment: Alignment.center,
-                    margin: const EdgeInsets.only(top: 180),
+                    margin: const EdgeInsets.only(bottom: 100),
                     child: ElevatedButton(
-                      child: const Text("FAQ"),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(170, 45),
+                        maximumSize: const Size(200, 50),
+                      ),
+                      child: const Text("BECAS"),
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -64,14 +74,54 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Container(
                     alignment: Alignment.center,
-                    margin: const EdgeInsets.only(top: 0),
+                    margin: const EdgeInsets.only(bottom: 0),
                     child: ElevatedButton(
-                      child: const Text("Costo de vida"),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(170, 45),
+                        maximumSize: const Size(200, 50),
+                      ),
+                      child: const Text("COSTO DE VIDA"),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SecondScreen()),
+                              builder: (context) => const FourthScreen()),
+                        );
+                      },
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 100),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(170, 45),
+                        maximumSize: const Size(200, 50),
+                      ),
+                      child: const Text("FAQ"),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FifthScreen()),
+                        );
+                      },
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(top: 200),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(160, 45),
+                        maximumSize: const Size(160, 50),
+                      ),
+                      child: const Text("¿CÓMO POSTULAR?"),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SixthScreen()),
                         );
                       },
                     ),
@@ -132,6 +182,48 @@ class FourthScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Fourth Screen"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class FifthScreen extends StatelessWidget {
+  const FifthScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Fifth Screen"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class SixthScreen extends StatelessWidget {
+  const SixthScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Sixth Screen"),
       ),
       body: Center(
         child: RaisedButton(
