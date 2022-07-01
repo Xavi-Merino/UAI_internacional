@@ -116,7 +116,7 @@ class HomeScreen extends StatelessWidget {
                         minimumSize: const Size(160, 45),
                         maximumSize: const Size(160, 50),
                       ),
-                      child: const Text("¿CÓMO POSTULAR?"),
+                      child: const Text("POSTULAR"),
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -179,16 +179,27 @@ class FourthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Fourth Screen"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+    return MaterialApp(
+      title: "COSTO DE VIDA",
+      home: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/mapa.png"), fit: BoxFit.cover)),
+        child: Center(
+          child: Expanded(
+            child: RaisedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go back!'),
+            ),
+            /*child: Scaffold(
+              appBar: AppBar(
+                backgroundColor: (Colors.transparent),
+                title: Text("COSTO DE VIDA"),
+              )
+            ),*/
+          ),
         ),
       ),
     );
@@ -223,7 +234,210 @@ class SixthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sixth Screen"),
+        title: Text("Postular"),
+      ),
+      body: Stack(
+        children: <Widget>[
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(top: 100),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(170, 45),
+                maximumSize: const Size(200, 50),
+              ),
+              child: const Text("Como postular?"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SevenScreen()),
+                );
+              },
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(bottom: 200),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(170, 45),
+                maximumSize: const Size(200, 50),
+              ),
+              child: const Text("Cuando postular?"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const EightScreen()),
+                );
+              },
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(bottom: 100),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(170, 45),
+                maximumSize: const Size(200, 50),
+              ),
+              child: const Text("Requisitos"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const NineScreen()),
+                );
+              },
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(bottom: 0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(170, 45),
+                maximumSize: const Size(200, 50),
+              ),
+              child: const Text("Prueba de idioma"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TenScreen()),
+                );
+              },
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(top: 100),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(170, 45),
+                maximumSize: const Size(200, 50),
+              ),
+              child: const Text("Costo de intercambio"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ElevenScreen()),
+                );
+              },
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(top: 200),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(160, 45),
+                maximumSize: const Size(160, 50),
+              ),
+              child: const Text("Go Back"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SevenScreen extends StatelessWidget {
+  const SevenScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Como postular?"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class EightScreen extends StatelessWidget {
+  const EightScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Cuando postular?"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class NineScreen extends StatelessWidget {
+  const NineScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Requisitos"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class TenScreen extends StatelessWidget {
+  const TenScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Prueba de idioma"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class ElevenScreen extends StatelessWidget {
+  const ElevenScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Costo de intercambio"),
       ),
       body: Center(
         child: RaisedButton(
