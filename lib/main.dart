@@ -355,14 +355,28 @@ class SevenScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Como postular?"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+      body: Stack(children: <Widget>[
+        Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.only(top: 200),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(160, 45),
+              maximumSize: const Size(160, 50),
+            ),
+            child: const Text("Go Back"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            },
+          ),
         ),
-      ),
+        Center(
+          child: Text('Se postula como... '),
+        )
+      ]),
     );
   }
 }
@@ -376,14 +390,28 @@ class EightScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Cuando postular?"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+      body: Stack(children: <Widget>[
+        Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.only(top: 200),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(160, 45),
+              maximumSize: const Size(160, 50),
+            ),
+            child: const Text("Go Back"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            },
+          ),
         ),
-      ),
+        Center(
+          child: Text('Se postula en... '),
+        )
+      ]),
     );
   }
 }
@@ -397,14 +425,28 @@ class NineScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Requisitos"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+      body: Stack(children: <Widget>[
+        Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.only(top: 200),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(160, 45),
+              maximumSize: const Size(160, 50),
+            ),
+            child: const Text("Go Back"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            },
+          ),
         ),
-      ),
+        Center(
+          child: Text('Los requisitos son... '),
+        )
+      ]),
     );
   }
 }
@@ -418,14 +460,28 @@ class TenScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Prueba de idioma"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+      body: Stack(children: <Widget>[
+        Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.only(top: 200),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(160, 45),
+              maximumSize: const Size(160, 50),
+            ),
+            child: const Text("Go Back"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            },
+          ),
         ),
-      ),
+        Center(
+          child: Text('Las pruebas de idioma son...'),
+        )
+      ]),
     );
   }
 }
@@ -439,14 +495,28 @@ class ElevenScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Costo de intercambio"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+      body: Stack(children: <Widget>[
+        Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.only(top: 200),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(160, 45),
+              maximumSize: const Size(160, 50),
+            ),
+            child: const Text("Go Back"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            },
+          ),
         ),
-      ),
+        Center(
+          child: Text('El costo de intercambio es de... '),
+        )
+      ]),
     );
   }
 }
