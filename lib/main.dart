@@ -240,7 +240,7 @@ class SixthScreen extends StatelessWidget {
         children: <Widget>[
           Container(
             alignment: Alignment.center,
-            margin: const EdgeInsets.only(top: 100),
+            margin: const EdgeInsets.only(top: 300),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(170, 45),
@@ -358,7 +358,7 @@ class SevenScreen extends StatelessWidget {
       body: Stack(children: <Widget>[
         Container(
           alignment: Alignment.center,
-          margin: const EdgeInsets.only(top: 200),
+          margin: const EdgeInsets.only(top: 300),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(160, 45),
