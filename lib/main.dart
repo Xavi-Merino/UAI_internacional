@@ -139,7 +139,7 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Screen"),
+        title: Text("CONVENIOS"),
       ),
       body: Center(
         child: RaisedButton(
@@ -160,16 +160,34 @@ class ThirdScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Third Screen"),
+        title: Text("BECAS"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+      body: Stack(children: <Widget>[
+        Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.only(top: 200),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(160, 45),
+              maximumSize: const Size(160, 50),
+            ),
+            child: const Text("Go Back"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            },
+          ),
         ),
-      ),
+        Center(
+          child: Text('''*Beca Líderes Emergentes de las Américas (Canadá)
+                *Beca de la Fundación Botín (España)
+                *Becas ISEP (Diferentes países)
+                *Becas de la Alianza del Pacífico.
+                *Becas del Gobierno de Corea.'''),
+        )
+      ]),
     );
   }
 }
@@ -375,12 +393,13 @@ class SevenScreen extends StatelessWidget {
         ),
         Center(
           child: Text(
-              '''Si ya has sido nominado por tu Universidad de origen, entonces recibirás instrucciones para completar tu postulación en línea.Certificado de Notas actualizados (Debe ser en español o inglés)
-              Formulario Preliminar de Acuerdo Académico (Learning Agreement)
-              Certificado que acredite dominio de español (DELE B1) o certificado emitido por la institución de origen (timbrado y firmado) que acredite nivel B1 según el Marco Europeo de Referencia para las Lenguas. 
+              '''Si ya has sido nominado por tu Universidad de origen, entonces recibirás instrucciones para completar tu postulación en línea:
+              *Certificado de Notas actualizados (Debe ser en español o inglés)
+              *Formulario Preliminar de Acuerdo Académico (Learning Agreement)
+              *Certificado que acredite dominio de español (DELE B1) o certificado emitido por la institución de origen (timbrado y firmado) que acredite nivel B1 según el Marco Europeo de Referencia para las Lenguas. 
               (Sólo para estudiantes originarios de países no-hispanoblantes). B2 en el caso de estudiantes en la Facultad de Medicina
-              Copia a color de la hoja de identificación del pasaporte en formato digital (.JPG, .PDF, .PNG)
-              Fotografía en alta definición. '''),
+              *Copia a color de la hoja de identificación del pasaporte en formato digital (.JPG, .PDF, .PNG)
+              *Fotografía en alta definición. '''),
         )
       ]),
     );
@@ -415,7 +434,9 @@ class EightScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('''Se postula en... '''),
+          child: Text(
+              '''Para el Segundo Semestre de  2021 (Julio - Diciembre), el proceso de postulación es entre abril y mayo de 2021. 
+                Para el Primer Semestre de 2022 (Marzo – Julio), el proceso de postulación es entre septiembre y octubre de 2021.'''),
         )
       ]),
     );
@@ -450,7 +471,15 @@ class NineScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('''Los requisitos son... '''),
+          child: Text(
+              '''Para poder ser seleccionado en el programa de intercambio deberás cumplir con los siguientes requisitos:
+                *Ser alumno regular UAI de pregrado.
+                *Haber cursado el segundo semestre al momento de realizar el intercambio, salvo que la carrera respectiva exija un número de semestre superior al indicado y así esté informado en la Dirección de Globalización.
+                *Contar con el visto bueno de la carrera para realizar el intercambio.
+                *No estar sometido a sumario o investigación sumaria por falta disciplinaria ni haber sido sujeto de sanción aplicada como consecuencia de tales procedimientos.
+                *Tener salud compatible para participar en el intercambio.
+                *Estar al día con la matrícula y mensualidades UAI.
+                *Cumplir con el Requisito de idioma correspondiente que exige cada universidad extranjera.'''),
         )
       ]),
     );
@@ -485,7 +514,9 @@ class TenScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('''Las pruebas de idioma son...'''),
+          child: Text(
+              '''El TOEFL (Test of English as a Foreign Language) es una prueba estandarizada de dominio del idioma inglés estadounidense, específicamente orientada a hablantes no nativos de este idioma. Como estándar, esta prueba es aceptada por muchas instituciones académicas y profesionales de habla Inglesa alrededor del mundo.  Educational Testing Service (ETS), una organización sin fines de lucro, diseña y administra las pruebas.
+          El IELTS (International English Language Testing System: ‘Sistema Internacional de Prueba del Idioma Inglés’) es el examen de inglés más utilizado en el mundo para migración y educación superior. Pertenece conjuntamente a Universidad de Cambridge, British Council, e IDPIelts Australia.'''),
         )
       ]),
     );
@@ -520,7 +551,10 @@ class ElevenScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('''El costo de intercambio es de... '''),
+          child: Text(
+              '''Una posible fórmula para calcular cuánto cuesta un intercambio sería la siguiente:
+          Precio por semana + dinero para gastos (110 USD/semana es razonable) + vuelo + seguro + visa = coste total del intercambio
+          El precio promedio que vas a tener que pagar por un programa de intercambio será de unos 600 USD por semana. A esa cantidad es necesario añadirle el costo del viaje, que puede valer tanto como el intercambio, más los gastos de visado (si los hay) y los seguros. También necesitarás algo de dinero para gastos y puede que tengas que pagar algunas comidas. En total, por un intercambio en el extranjero de tres semanas de duración, calcula que deberás contar por lo menos con 3,500 USD todo incluido. Con un presupuesto de 4,500 USD, tendrás más opciones de intercambio. El precio de nuestros intercambios en Toronto empieza en los  190 USD por dos semanas, sin incluir los vuelos.'''),
         )
       ]),
     );
