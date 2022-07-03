@@ -240,7 +240,7 @@ class SixthScreen extends StatelessWidget {
         children: <Widget>[
           Container(
             alignment: Alignment.center,
-            margin: const EdgeInsets.only(top: 300),
+            margin: const EdgeInsets.only(top: 200),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(170, 45),
@@ -325,7 +325,7 @@ class SixthScreen extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
-            margin: const EdgeInsets.only(top: 200),
+            margin: const EdgeInsets.only(top: 300),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(160, 45),
@@ -374,7 +374,13 @@ class SevenScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('Se postula como... '),
+          child: Text(
+              '''Si ya has sido nominado por tu Universidad de origen, entonces recibirás instrucciones para completar tu postulación en línea.Certificado de Notas actualizados (Debe ser en español o inglés)
+              Formulario Preliminar de Acuerdo Académico (Learning Agreement)
+              Certificado que acredite dominio de español (DELE B1) o certificado emitido por la institución de origen (timbrado y firmado) que acredite nivel B1 según el Marco Europeo de Referencia para las Lenguas. 
+              (Sólo para estudiantes originarios de países no-hispanoblantes). B2 en el caso de estudiantes en la Facultad de Medicina
+              Copia a color de la hoja de identificación del pasaporte en formato digital (.JPG, .PDF, .PNG)
+              Fotografía en alta definición. '''),
         )
       ]),
     );
@@ -409,7 +415,7 @@ class EightScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('Se postula en... '),
+          child: Text('''Se postula en... '''),
         )
       ]),
     );
@@ -444,7 +450,7 @@ class NineScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('Los requisitos son... '),
+          child: Text('''Los requisitos son... '''),
         )
       ]),
     );
@@ -479,7 +485,7 @@ class TenScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('Las pruebas de idioma son...'),
+          child: Text('''Las pruebas de idioma son...'''),
         )
       ]),
     );
@@ -514,7 +520,7 @@ class ElevenScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text('El costo de intercambio es de... '),
+          child: Text('''El costo de intercambio es de... '''),
         )
       ]),
     );
