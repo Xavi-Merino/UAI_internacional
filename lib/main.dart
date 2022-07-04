@@ -231,16 +231,54 @@ class FifthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Fifth Screen"),
+        title: Text("FAQ"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+      body: Stack(children: <Widget>[
+        Container(
+          alignment: Alignment.bottomCenter,
+          margin: const EdgeInsets.only(bottom: 50),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(160, 45),
+              maximumSize: const Size(160, 50),
+            ),
+            child: const Text("Go Back"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            },
+          ),
         ),
-      ),
+        Center(
+          child: Text(
+            '''Preguntas Frecuentes
+            A continuación se daran a concer algunas de las preguntas frecuentes
+            1) ¿Cómo postular?
+            -Dentro de la aplicación en la seccion postular puedes solucionar tus dudas.
+            2) Si quedo seleccionado, ¿Con quien puedo hablar?
+            -Puedes hablar con Francisco Ferrer, coordinador de UAI internacional, su correo es francisco.ferrer@uai.cl
+            3) ¿Cómo saber si quede seleccionado?
+            -Se te dará aviso via correo electronico de los resultados 
+            4) ¿Puedo quedarme más de un semestre, en caso de ser seleccionado?
+            -Deberas hablar con Francisco ferrer, para saber acerca de las posibilidades.
+            5) ¿Debo pagar extra en la universidad de destino?
+            -Por lo general no, debes continuar pagando tu arancel UAI con normaliadad, pero hay excepciones.
+            6) ¿Debo sacar visa obligatoriamente?
+            -Depedendera de a que lugar viajes.
+            7) ¿Cómo convalido mis ramos?
+            -Una vez quedes seleccionado se te dará una charla explicando el paso a paso.
+            8) ¿Cuanto dinero debo llevar?
+            -Es muy variable, ya que dependera de tus gastos.''',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.normal,
+            fontSize: 20
+           ),
+          ),
+        )
+      ]),
     );
   }
 }
