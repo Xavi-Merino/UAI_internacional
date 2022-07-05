@@ -3,6 +3,8 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:myapp/api/welcome.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,6 +15,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(home: new HomeScreen());
   }
+
+  /*@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "LoginApp",
+      home: WelcomePage(),
+      builder: EasyLoading.init(),
+    );
+  }*/
 }
 
 class HomeScreen extends StatelessWidget {
