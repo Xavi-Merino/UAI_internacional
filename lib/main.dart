@@ -242,20 +242,18 @@ class FifthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
- //     home: container(
-   //         constraints: const BoxConstraints.expand(),
-     //       decoration: const BoxDecoration(
-     //       color: Color.fromARGB(255, 29, 31, 33),
-     //       image: DecorationImage(
-     //         image: NetworkImage("https://i.postimg.cc/ncfdmc54/mapamundi.png"),
-     //       ),
-      //    ),
-       //   child: Scaffold(
-       //       backgroundColor: Color.fromARGB(0, 0, 0, 0),
-       //   ),
-    //  ),
-
+    return MaterialApp(
+      home: Container(
+          constraints: const BoxConstraints.expand(),
+          decoration: const BoxDecoration(
+            color: Color.fromARGB(255, 29, 31, 33),
+            image: DecorationImage(
+                image: NetworkImage(
+                 "https://i.postimg.cc/ncfdmc54/mapamundi.png"
+                ),
+                fit: BoxFit.cover),
+          ),
+      child: Scaffold(
       appBar: AppBar(
         title: Text("FAQ"),
       ),
@@ -305,7 +303,9 @@ class FifthScreen extends StatelessWidget {
           ),
         )
       ]),
-    );
+      ),
+      ),
+      );
   }
 }
 
