@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     );
   }*/
 }
-
+// WE CREATE THE HOME SCREEN
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
   @override
@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
             color: Color.fromARGB(255, 29, 31, 33),
             image: DecorationImage(
                 image: NetworkImage(
-                 "https://i.postimg.cc/ncfdmc54/mapamundi.png"
+                 "https://i.postimg.cc/ncfdmc54/mapamundi.png" // ADD THE WALLPAPER
                 ),
                 fit: BoxFit.cover),
           ),
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                 title: const Text("Botones con fondo"),
               ),
               body: Stack(
-                children: <Widget>[
+                children: <Widget>[ // CREATION OF MENU BOTTONS
                   Container(
                     alignment: Alignment.center,
                     margin: const EdgeInsets.only(bottom: 200),
@@ -142,9 +142,9 @@ class HomeScreen extends StatelessWidget {
               ))),
     );
   }
-}
+} // END OF CREATION BOTTONS
 
-class SecondScreen extends StatelessWidget {
+class SecondScreen extends StatelessWidget { // CREATION OF THE SECOND SCREEN
   const SecondScreen({Key? key}) : super(key: key);
 
   @override
@@ -177,10 +177,10 @@ class ThirdScreen extends StatelessWidget {
       body: Stack(children: <Widget>[
         Container(
           alignment: Alignment.center,
-          margin: const EdgeInsets.only(top: 200),
+          margin: const EdgeInsets.only(top: 200), // POSITION OF THE BOTTON
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              minimumSize: const Size(160, 45),
+              minimumSize: const Size(160, 45), // SIZE OF THE BOTTON
               maximumSize: const Size(160, 50),
             ),
             child: const Text("Go Back"),
@@ -197,14 +197,14 @@ class ThirdScreen extends StatelessWidget {
                 *Beca de la Fundación Botín (España)
                 *Becas ISEP (Diferentes países)
                 *Becas de la Alianza del Pacífico.
-                *Becas del Gobierno de Corea.'''),
+                *Becas del Gobierno de Corea.'''), // (' ' ') THIS QUOTES MARKS MAKE A JUMP OF LINE
         )
       ]),
     );
   }
 }
 
-class FourthScreen extends StatelessWidget {
+class FourthScreen extends StatelessWidget { // CREATION OF THE FOURTH SCREEN
   const FourthScreen({Key? key}) : super(key: key);
 
   @override
@@ -236,7 +236,7 @@ class FourthScreen extends StatelessWidget {
   }
 }
 
-class FifthScreen extends StatelessWidget {
+class FifthScreen extends StatelessWidget { // CREATION OF THE FIFTH SCREEN
   const FifthScreen({Key? key}) : super(key: key);
 
 
@@ -276,7 +276,7 @@ class FifthScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Text(
+          child: Text( // TEXT OF "FAQ" SECTION
             '''Preguntas Frecuentes
             A continuación se daran a concer algunas de las preguntas frecuentes
             1) ¿Cómo postular?
